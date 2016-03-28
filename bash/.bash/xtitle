@@ -1,0 +1,91 @@
+## DAH ~/.bash_xtitle - function to change the title of the xterm
+## Contact: Dave Harding <dave@dtrt.org>
+## $Id: .bash_xtitle 37 2005-02-06 01:10:37Z dave $
+function xtitle ()
+{
+    XTITLE="$@"
+    case $TERM in
+        aterm | rxvt* | xterm | screen)
+            echo -n -e "\033]0;$XTITLE\007" 
+    ;;
+        *)  
+	;;
+    esac
+
+    XT="$XTITLE"
+}
+
+## Yay manpages!
+function man ()
+{
+    xtitle "The $@ manual"
+    command man $@
+    xtitle xterm
+}
+
+## Dict
+function dict ()
+{
+    xtitle dict $@
+    command dict $@ | command less
+    xtitle xterm
+}
+
+## Less is cool
+function less ()
+{
+	xtitle less "$@"
+	command less "$@"
+	xtitle xterm
+}
+
+## Where's my chat window?!
+function irssi ()
+{
+	xtitle $FUNCNAME $@
+	command $FUNCNAME $@
+	xtitle xterm
+}
+
+#function tail ()
+#{
+#	xtitle $FUNCNAME $@
+#	command $FUNCNAME $@
+#	xtitle xterm
+#}
+
+## Music from other people
+## Oggs are better
+function madplay ()
+{
+        xtitle $FUNCNAME $@
+        command $FUNCNAME $@
+        xtitle xterm
+}
+
+## Fix mutt brokenes
+function mutt() {
+	#DATEFILE="$HOME/doc/mine/data/mutt"
+
+	#echo -n "You've read your email this many times already today: "
+	#grep -c $( date +%F ) "$DATEFILE"
+
+	#read
+
+	#date +%F >> "$DATEFILE"
+
+	if [ ! "$1" ]
+	then
+		command mutt -f '=aaa-followup'
+	else
+		command mutt $@
+	fi
+
+	#xtitle xterm
+	}
+
+#function nvi() {
+#	xtitle nvi $@
+#	command nvi $@
+#	xtitle xterm
+#	}

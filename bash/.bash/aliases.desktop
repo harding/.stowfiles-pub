@@ -1,0 +1,104 @@
+#alias totem="echo 'Start GnoTime Timer' ; read ; command totem"
+
+alias crontab=sl
+
+alias addressbook="echo Remember to print backup copy; sleep 3 ; $EDITOR $HOME/ref/addresses"
+alias commitdo="$EDITOR $HOME/ref/commitdo"
+alias whitelist="$EDITOR $HOME/.config/uzbl/cookie_whitelist"
+alias dhgrep="grep --exclude-dir=.git"
+alias topics="$EDITOR $HOME/ref/topics -c '$'"
+#alias findkeywords="grep '^#.*\[.*\]' $( find ~/var/file/elance -name '*mdwn'"
+alias eda="$EDITOR $HOME/var/git/dhnotes/Dependency_Analysis/diagram.dot"
+
+
+## sl Aliases
+alias wpdo=sl
+alias gqview=sl
+alias dasd=sl
+alias le=sl
+
+alias dtodo="rubber --into /tmp -d ref/todo/todo.tex && xpdf /tmp/todo.pdf"
+alias dedit="$EDITOR ~/ref/todo/todo.tex"
+
+## Alias-like functions
+gi() {
+    ${VISUAL:-${EDITOR:-vi}} ~/ref/general-information.mdwn \
+	&& pandoc -o /tmp/general-information.html ~/ref/general-information.mdwn \
+	&& uzbl /tmp/general-information.html
+}
+
+_if_unlocked() {
+    if [ -f "$HOME/.lockup" ]
+    then
+	echo "$HOME/.lockup found.  Not starting."
+	return 1
+    fi
+}
+
+alias dads='ssh -t dtrt screenx'
+alias dadm='echo "IRC on deimos"; read ; mosh dtrt screenx'
+alias has='ssh slug'
+alias hass='ssh -t slug screenx'
+
+mutt() {
+    #_if_unlocked || return 1
+
+    echo "Which are you doing: scheduled or emergency"
+    read
+    case "$REPLY" in
+      scheduled|emergency)
+        :
+      ;;
+
+      *)
+        echo "Mail is only for scheduled or emergency"
+        return false
+      ;;
+    esac
+
+    #echo "Please only read email after doing work.  Press return to continue."
+    #read
+
+    #if ! [ -f /tmp/harding-muttpw ]
+    #then
+    #    echo "Password file not found.  Press enter to continue..."
+    #    read
+    #fi
+
+    #ssh bitcoind1 ./enforcer_enabled || return 1
+
+    maildirgit-client || return 1
+    dhonline && gsync var/maildir || return 1
+    if [ ! "$1" ]
+    then
+	    command mutt -f '+.aaa-followup'
+    else
+	    command mutt $@
+    fi
+    maildirgit-client || return 1
+    dhonline && gsync var/maildir
+}
+
+#alias asdf="xmodmap $HOME/.dvorak.xmodmap"
+#alias aoeu="xmodmap $HOME/.qwerty.xmodmap"
+alias asdf="setxkbmap us dvorak"
+alias aoeu="setxkbmap us"
+alias lsgc="ls -lh $HOME/doc/mine/gnucash/dharding; df -h $HOME/doc/mine/gnucash/dharding"
+#alias mc="gsync $HOME/var/maildir ; find ~/var/maildir -type f | grep '/new/' | egrep -v '\.Sent|\.keep|.git|\.learn|.saved|\.lvlug|courierim|\.aaa'"
+
+#alias make="command make; beep"
+
+## Cucumber aliases
+alias cwip="cucumber --tag @wip"
+alias cbroken="cucumber --tag @broken"
+
+alias nvi='sl ; sl ; sl ; sl ; sl'
+
+## Worklog
+alias worklog="cd $HOME/var/git/worklog ; command worklog"
+
+export BITCOINORG_BUILD_TYPE=preview
+
+cdr() {
+  cd $( git rev-parse --show-toplevel )
+}

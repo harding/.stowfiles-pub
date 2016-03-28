@@ -1,0 +1,5 @@
+## Desktop aliases
+. $HOME/.bash/aliases.desktop
+
+alias eau="ssh ubuntu"
+

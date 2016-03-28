@@ -1,0 +1,2 @@
+alias dads='ssh -t dtrt screen -x'
+alias vim=sl

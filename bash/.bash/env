@@ -1,0 +1,28 @@
+## PATH
+export PATH="$PATH:$HOME/bin:/usr/bin:/usr/sbin:/bin:/sbin:/usr/pkg/bin:/usr/pkg/sbin:/usr/local/bin:/usr/local/sbin:/usr/X11R6/bin:/usr/libexec:/usr/games:/usr/bin/games"
+
+## News server
+export NNTPSERVER='news.gmane.org'
+
+## Music Player Daemon server
+#export MPD_HOST='192.168.1.40'
+
+## SSH Agent
+if [ -f $HOME/.keychain/$HOSTNAME-sh ]
+then
+    . $HOME/.keychain/$HOSTNAME-sh
+fi
+
+## Cron doesn't set $USER or $HOSTNAME
+export USER=${USER:-`whoami`}
+export HOSTNAME=$( hostname -s )
+
+## My variables
+export CHIMELOCK=~/volume-level.lock
+
+## For Stowed Python Packages (e.g. Mnemosyne)
+export PYTHONPATH=/usr/local/lib/python2.7/site-packages
+
+## For Ledger
+export LEDGER_FILE=$HOME/ref/ledger/ledger.ledger
+export LEDGER=$LEDGER_FILE

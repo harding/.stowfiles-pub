@@ -1,0 +1,47 @@
+## Desktop aliases
+. $HOME/.bash/aliases.desktop
+
+## Aliases for website stuffs
+#. $HOME/etc/webdata/bash-vars.incl
+alias gtg="cd $WEBDATA/gnuisance.net/"
+alias gtd="cd $WEBDATA/dtrt.org/"
+alias rtg="cd $WEBDATA/gnuisance.net/ ; make upload"
+
+alias eau="ssh ubuntu"
+
+## Misc. Aliases
+alias aterm-presentation="urxvt -fn -misc-fixed-*-*-normal-*-20-*-*-*-*-*-*-*"
+alias travel="nvi doc/mine/notes/travel"
+alias pwords="nvi ~/doc/mine/notes/pwords"
+alias withdrawls="nvi ~/doc/mine/notes/withdrawls"
+alias ccount="nvi ~/doc/mine/notes/calories-counts"
+alias weightrecord="nvi ~/doc/mine/data/diet/scale-data.txt"
+alias booklist="nvi ~/doc/mine/data/booklist"
+alias vocab="nvi ~/doc/mine/notes/vocabulary-words"
+alias ecal="nvi ~/var/eticker/db/calendar"
+alias watchstatus="watch --no-title -n 60 status"
+alias smc="zsnes $HOME/games/super-mario-kart.smc"
+alias ct="zsnes $HOME/games/chrono-trigger.zip"
+alias prepcoup="diction -nf ~/.diction/prepcoup"
+alias f-spot="dbus-launch f-spot"
+alias mntodo="$EDITOR ~/.mnemosyne/todo"
+
+## Clean up latex files in home directory
+#clean-latex-files $HOME
+
+## Xorg (15Aril2008)
+export ACLOCAL="aclocal -I /usr/local/share/aclocal"
+
+export PKG_CONFIG_PATH=/usr/local/lib/pkgconfig:${PKG_CONFIG_PATH}
+export LD_LIBRARY_PATH=/usr/local/lib:${LD_LIBRARY_PATH}
+export LD_RUN_PATH=/usr/local/lib:${LD_RUN_PATH}
+
+
+#rem
+alias remind-a-day="once-a-day .remind-a-day 'remind var/unison/doc/remind/todo_schedule.remind'"
+
+alias m=myrpg
+alias fl="$EDITOR $HOME/var/wiki/Food_List.mdwn"
+alias cn="check-nom"
+alias wp="ssh -t inhome workpri"
+alias urxvt-small-font="urxvt -fn '-*-lucidatypewriter-*-r-*-*-*-*-*-*-*-*-*-*'"
