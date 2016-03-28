@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="StopCommand" mtime="1429575236" type="string">
+		<stringvalue>echo stop id=%D \&quot;%t\&quot;-\&quot;%d\&quot; %T  %H-%M-%S hours=%h min=%m secs=%s</stringvalue>
+	</entry>
+	<entry name="StartCommand" mtime="1429575236" type="string">
+		<stringvalue>echo start id=%D \&quot;%t\&quot;-\&quot;%d\&quot; %T  %H-%M-%S hours=%h min=%m secs=%s</stringvalue>
+	</entry>
+</gconf>

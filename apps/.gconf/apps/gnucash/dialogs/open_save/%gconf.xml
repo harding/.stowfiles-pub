@@ -1,0 +1,6 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="last_path" mtime="1375629367" type="string">
+		<stringvalue>/home/harding/var/git/dot/gnucash</stringvalue>
+	</entry>
+</gconf>

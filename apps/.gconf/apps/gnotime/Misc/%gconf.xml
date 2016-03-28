@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="NumReports" mtime="1429575236" type="int" value="0"/>
+	<entry name="WeekStartOffset" mtime="1429575236" type="int" value="0"/>
+	<entry name="DayStartOffset" mtime="1429575236" type="int" value="10800"/>
+	<entry name="NumProjects" mtime="1429575236" type="int" value="-1"/>
+	<entry name="CurrProject" mtime="1429575236" type="int" value="-1"/>
+	<entry name="TimerRunning" mtime="1429575236" type="int" value="0"/>
+	<entry name="AutosavePeriod" mtime="1429575236" type="int" value="60"/>
+	<entry name="NoProjectTimeout" mtime="1429575236" type="int" value="-1"/>
+	<entry name="IdleTimeout" mtime="1429575236" type="int" value="180"/>
+	<entry name="LastTimer" mtime="1429575236" type="string">
+		<stringvalue>1429575236</stringvalue>
+	</entry>
+</gconf>

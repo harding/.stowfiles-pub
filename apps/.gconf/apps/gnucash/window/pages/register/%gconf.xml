@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="split-type_width" mtime="1375644213" type="int" value="17"/>
+	<entry name="date-due_width" mtime="1375644213" type="int" value="98"/>
+	<entry name="credit_width" mtime="1375644213" type="int" value="90"/>
+	<entry name="debit_width" mtime="1375644213" type="int" value="90"/>
+	<entry name="transfer_width" mtime="1375644213" type="int" value="223"/>
+	<entry name="balance_width" mtime="1375644213" type="int" value="90"/>
+	<entry name="reconcile_width" mtime="1375644213" type="int" value="18"/>
+	<entry name="num_width" mtime="1375644213" type="int" value="50"/>
+	<entry name="date_width" mtime="1375644213" type="int" value="98"/>
+</gconf>

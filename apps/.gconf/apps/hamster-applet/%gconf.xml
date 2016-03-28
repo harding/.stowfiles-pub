@@ -1,0 +1,39 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="stop_on_shutdown" mtime="1423405045" type="bool" value="true"/>
+	<entry name="notify_on_idle" mtime="1426898190" type="bool" value="false"/>
+	<entry name="notify_interval" mtime="1426898205" type="int" value="121"/>
+	<entry name="overview_window_box" mtime="1426897541" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>0</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>0</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>1276</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>616</stringvalue>
+		</li>
+	</entry>
+	<entry name="overview_window_maximized" mtime="1426897541" type="bool" value="false"/>
+	<entry name="standalone_window_box" mtime="1426898213" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>0</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>0</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>1278</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>762</stringvalue>
+		</li>
+	</entry>
+	<entry name="standalone_window_maximized" mtime="1426898213" type="bool" value="false"/>
+	<entry name="activities_source" mtime="1426898187" type="string">
+		<stringvalue></stringvalue>
+	</entry>
+</gconf>

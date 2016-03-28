@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="tab_position" mtime="1374610946" type="string">
+		<stringvalue>top</stringvalue>
+	</entry>
+	<entry name="autosave_show_explanation" mtime="1374598042" type="bool" value="false"/>
+	<entry name="file_compression" mtime="1374598037" type="bool" value="false"/>
+</gconf>

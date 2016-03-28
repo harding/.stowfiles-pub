@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="always_reconcile_to_today" mtime="1374610852" type="bool" value="true"/>
+</gconf>

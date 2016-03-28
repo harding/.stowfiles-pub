@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="SaveCount" mtime="1429575236" type="int" value="41381"/>
+	<entry name="URL" mtime="1429575236" type="string">
+		<stringvalue>gnotime.d/gnotime-data.xml</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="CurrencyUseLocale" mtime="1429575236" type="bool" value="true"/>
+	<entry name="CurrencySymbol" mtime="1429575236" type="string">
+		<stringvalue>(null)</stringvalue>
+	</entry>
+</gconf>

@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="ColumnWidths" mtime="1429575236" type="list" ltype="int">
+		<li type="int" value="72"/>
+		<li type="int" value="72"/>
+		<li type="int" value="72"/>
+		<li type="int" value="72"/>
+		<li type="int" value="72"/>
+		<li type="int" value="72"/>
+		<li type="int" value="72"/>
+		<li type="int" value="774"/>
+	</entry>
+</gconf>

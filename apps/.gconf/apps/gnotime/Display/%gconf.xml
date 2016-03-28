@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="ExpanderState" mtime="1429575236" type="string">
+		<stringvalue>ynnnnnynnnnnnynnnnnn</stringvalue>
+	</entry>
+	<entry name="ShowStatus" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowImportance" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowUrgency" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowPercentComplete" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowSizing" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowDueDate" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowEstimatedEnd" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowEstimatedStart" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowTask" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowDesc" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowTimeEver" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowTimeYear" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowTimeMonth" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowTimeLastWeek" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowTimeWeek" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowTimeYesterday" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowTimeDay" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowTimeCurrent" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowTableHeader" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowSubProjects" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowStatusbar" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowSecs" mtime="1429575236" type="bool" value="false"/>
+</gconf>

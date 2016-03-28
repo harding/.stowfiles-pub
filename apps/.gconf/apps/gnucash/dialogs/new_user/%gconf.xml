@@ -1,0 +1,4 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="first_startup" mtime="1374597880" type="bool" value="false"/>
+</gconf>

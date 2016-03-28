@@ -1,0 +1,7 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="default_style" mtime="1374610865" type="string">
+		<stringvalue>auto_ledger</stringvalue>
+	</entry>
+	<entry name="enter_moves_to_end" mtime="1374610830" type="bool" value="true"/>
+</gconf>

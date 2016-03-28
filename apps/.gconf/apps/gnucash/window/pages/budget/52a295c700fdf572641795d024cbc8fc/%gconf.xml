@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="name_width" mtime="1375629396" type="int" value="1173"/>
+	<entry name="column_order" mtime="1375629384" type="list" ltype="string">
+		<li type="string">
+			<stringvalue>name</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>type</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>commodity</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>account-code</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>description</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>lastnum</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>present</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>present_report</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>balance</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>balance_report</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>balance-period</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>cleared</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>cleared_report</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>reconciled</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>reconciled_report</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>last-recon-date</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>future_min</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>future_min_report</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>total</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>total_report</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>total-period</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>notes</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>tax-info</stringvalue>
+		</li>
+		<li type="string">
+			<stringvalue>placeholder</stringvalue>
+		</li>
+	</entry>
+	<entry name="placeholder_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="tax-info_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="notes_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="total-period_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="total_report_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="total_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="future_min_report_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="future_min_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="last-recon-date_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="reconciled_report_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="reconciled_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="cleared_report_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="cleared_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="balance-period_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="balance_report_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="balance_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="present_report_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="present_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="lastnum_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="description_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="account-code_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="commodity_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="type_visible" mtime="1375629384" type="bool" value="false"/>
+	<entry name="name_visible" mtime="1375629384" type="bool" value="true"/>
+</gconf>

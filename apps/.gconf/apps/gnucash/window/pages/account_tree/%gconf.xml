@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="total_width" mtime="1374597900" type="int" value="112"/>
+	<entry name="description_width" mtime="1374597900" type="int" value="202"/>
+	<entry name="name_width" mtime="1374597900" type="int" value="177"/>
+	<entry name="placeholder_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="tax-info_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="notes_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="total-period_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="total_report_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="total_visible" mtime="1374597900" type="bool" value="true"/>
+	<entry name="future_min_report_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="future_min_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="last-recon-date_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="reconciled_report_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="reconciled_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="cleared_report_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="cleared_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="balance-period_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="balance_report_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="balance_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="present_report_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="present_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="lastnum_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="description_visible" mtime="1374597900" type="bool" value="true"/>
+	<entry name="account-code_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="commodity_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="type_visible" mtime="1374597900" type="bool" value="false"/>
+	<entry name="name_visible" mtime="1374597900" type="bool" value="true"/>
+</gconf>

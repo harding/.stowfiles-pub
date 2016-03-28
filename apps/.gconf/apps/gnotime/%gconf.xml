@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="time_format" mtime="1429575236" type="int" value="2"/>
+	<entry name="dir_exists" mtime="1429575236" type="int" value="1"/>
+</gconf>

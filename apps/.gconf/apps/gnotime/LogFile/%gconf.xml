@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="Filename" mtime="1429575236" type="string">
+		<stringvalue>/home/harding/tmp/gnotime</stringvalue>
+	</entry>
+	<entry name="MinSecs" mtime="1429575236" type="int" value="0"/>
+	<entry name="EntryStop" mtime="1429575236" type="string">
+		<stringvalue>STOPPED</stringvalue>
+	</entry>
+	<entry name="EntryStart" mtime="1429575236" type="string">
+		<stringvalue>STARTED</stringvalue>
+	</entry>
+	<entry name="Use" mtime="1429575236" type="bool" value="true"/>
+</gconf>

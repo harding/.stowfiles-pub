@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="ShowExit" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowHelp" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowPref" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowTimer" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowProp" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowJournal" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowCCP" mtime="1429575236" type="bool" value="false"/>
+	<entry name="ShowNew" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowTips" mtime="1429575236" type="bool" value="true"/>
+	<entry name="ShowToolbar" mtime="1429575236" type="bool" value="true"/>
+</gconf>

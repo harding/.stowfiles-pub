@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<gconf>
+	<entry name="HPaned" mtime="1429575236" type="int" value="278"/>
+	<entry name="VPaned" mtime="1429575236" type="int" value="446"/>
+	<entry name="Y" mtime="1429575236" type="int" value="22"/>
+	<entry name="X" mtime="1429575236" type="int" value="1"/>
+	<entry name="Height" mtime="1429575236" type="int" value="762"/>
+	<entry name="Width" mtime="1429575236" type="int" value="1278"/>
+</gconf>
