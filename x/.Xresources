@@ -1,0 +1,101 @@
+!# DAH ~/.Xresources for controlling xtk defaults
+!# Contact: Dave Harding <harda@gnuisance.net>
+!# $Id: .Xresources 36 2005-02-06 00:59:23Z dave $
+!#
+!# Related Files:
+!#	http://gnuisance.net/stuff/files/home-configs/xinitrc
+Aterm*transparent: 	True
+Aterm*scrollBar: 	False
+!Aterm*fading: 		60
+Aterm*foreground:	white
+Aterm*background:	black
+Aterm*cursorColor: 	white
+Aterm*cursorColor2: 	black
+Aterm*visualBell:	True
+Aterm*shading:		70
+XTerm*Foreground:	white
+XTerm*Background:	black
+XTerm*pointerColor:	white
+XTerm*cursorColor:	White
+XTerm*cursorColor2:	Black
+!Rxvt*inheritPixmap: 	True
+Rxvt*scrollBar:		False
+!Rxvt*termName:		rxvt
+Rxvt*title:		rxvt
+Rxvt*foreground:	white
+Rxvt*background:	black
+Rxvt*pointerColor:	white
+XClock*secondColor:	blue
+XClock*minuteColor:	red
+XClock*hourColor:	green
+XClock*minorColor:	magenta
+XClock*majorColor:	white
+XClock*chime:		yes
+XClock*background:	black
+XClock*update:		1
+! XBiff*checkCommand: 	mailkludge -rqf ~/.people -f ~/.actions ~/.newMail/
+XBiff*checkCommand: 	check_for_new_email
+XBiff*background:	black
+XBiff*foreground: 	white
+XBiff*onceOnly:		true
+XBiff*flip:		false
+! use xft for drawing fonts
+! URxvt.font: xft:Bitstream Vera Sans Mono-8.5
+URxvt*transparent:	true
+URxvt.background: 	[50]black
+URxvt*shading:	        40	
+URxvt.foreground: 	white
+! URxvt*inheritPixmap: 	true
+! make a scrollbar that is nearly black
+! URxvt*scrollBar:     	true
+! URxvt*scrollBar_floating:	true
+! URxvt*scrollBar_right:	false
+! URxvt*scrollColor:    	#202020
+!URxvt*termName:		xterm
+!URxvt*urlLauncher:      /usr/bin/iceweasel
+! matcher.button      # 3 is a right-click
+URxvt*matcher.button:	3
+URxvt*saveLines:	8192
+URxvt.perl-ext-common:	default
+URxvt*fading: 		5
+URxvt*fadeColor:	#222222
+URxvt*buffered:		true
+!URxvt.font: xft:Bitstream Vera Sans Mono-9.5
+URxvt*visualBell:	True
+URxvt*cursorColor:	#d8d8d8
+URxvt*urgentOnBell:	True
+! ! black 
+! URxvt*color0:		#222222
+! URxvt*color8:		#666666
+! ! red
+! URxvt*color1:		#9e1828
+! URxvt*color9:		#cf6171
+! ! green
+! URxvt*color2:		#aece92
+! URxvt*color10:		#c5f779
+! ! yellow
+! URxvt*color3:		#968a38
+! URxvt*color11:		#fff796
+! ! blue
+! URxvt*color4:		#71C5F4
+! URxvt*color12:		#67CDE9
+! ! magenta
+! URxvt*color5:		#963c59
+! URxvt*color13:		#cf9ebe
+! ! cyan
+! URxvt*color6:		#418179
+! URxvt*color14:		#71bebe
+! ! white
+! URxvt*color7:		#bebebe
+! URxvt*color15:		#FFFFFF
+!URxvt*font:		-*-terminus-bold-*-*-*-*-160-*-*-*-*-*-*
+!! External Monitor font:
+!URxvt.font:		xft:Bitstream Vera Sans Mono:pixelsize=17
+!! Internal monitor font:
+URxvt.font:		xft:Bitstream Vera Sans Mono:pixelsize=14
+mosh.background: 	[10]red
+pwsafe*title:	pwsafe
+pwsafe*geometry:	80x5+0+20
+Xpdf*initialZoom: width
+!URxvt*utmpInhibit:	false
+!URxvt*loginShell:	true

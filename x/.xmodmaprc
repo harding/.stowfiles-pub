@@ -1,0 +1,29 @@
+!remove Lock = Caps_Lock
+!keycode 117 = Shift_R
+
+! bottom: 1
+! keycode 153 = 1
+! left: 2
+! keycode 152 = 2
+! top: 3
+! keycode 144 = 3
+! right: 5
+! keycode 180 = 5
+
+! play: Space
+! keycode 162 = space
+! stop: 0
+! keycode 164 = 0
+
+!keycode 117 = Multi_key
+
+!clear Lock
+!keycode 66 = Multi_key
+
+!! Menu Key on Wave
+!keycode 117 = Escape
+!! Menu Key on Asus
+!keycode 135 = backslash bar backslash bar
+
+keycode 166 = Page_Up
+keycode 167 = Page_Down
