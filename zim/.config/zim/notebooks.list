@@ -1,0 +1,9 @@
+[NotebookList]
+Default=
+1=~/var/git/dhnotes
+
+[Notebook 1]
+uri=~/var/git/dhnotes
+name=dhnotes
+interwiki=None
+icon=None
