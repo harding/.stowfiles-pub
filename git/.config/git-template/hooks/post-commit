@@ -1,0 +1,9 @@
+#!/bin/bash -eu
+
+if ! git log -n1 --show-signature | grep -q 'gpg: Good signature from.*dave@dtrt.org'
+then
+    log_entry="$(git log -1 --oneline)"
+    notify-send "Git" "Forgot to sign $log_entry"
+fi
+
+.git/hooks/ctags >/dev/null 2>&1 &

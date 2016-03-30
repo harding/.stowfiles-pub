@@ -1,0 +1,6 @@
+#!/bin/bash -e
+
+if git config harding.notags > /dev/null 
+then 
+    git ls-files | ctags -L -
+fi

@@ -1,0 +1,23 @@
+[user]
+	email = dave@dtrt.org
+	name = David A. Harding
+
+[init]
+	templatedir = /home/harding/.config/git-template
+[color]
+	ui = auto
+[core]
+	pager = less -R
+	excludesfile = /home/harding/.config/gitignore
+[push]
+	default = nothing
+[tag]
+	sort = version:refname
+
+[alias]
+        logss = log --show-signature
+
+[commit]
+        #gpgsign = true
+[credential]
+	helper = cache --timeout=1209600
