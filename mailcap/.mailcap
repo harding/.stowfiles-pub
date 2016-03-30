@@ -1,0 +1,7 @@
+text/html; /usr/bin/google-chrome-stable --incognito %s & sleep 5; test=test -n "$DISPLAY"
+text/xml; /usr/bin/google-chrome-stable --incognito %s & sleep 5; test=test -n "$DISPLAY"
+application/xhtml_xml; /usr/bin/google-chrome-stable --incognito %s; test=test -n "$DISPLAY"
+image/webp; /usr/bin/google-chrome-stable --incognito %s & sleep 5; test=test -n "$DISPLAY"
+x-scheme-handler/http; /usr/bin/google-chrome-stable --incognito %s & sleep 5; test=test -n "$DISPLAY"
+x-scheme-handler/https; /usr/bin/google-chrome-stable --incognito %s & sleep 5; test=test -n "$DISPLAY"
+x-scheme-handler/ftp; /usr/bin/google-chrome-stable --incognito %s & sleep 5; test=test -n "$DISPLAY"
