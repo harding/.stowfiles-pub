@@ -1,0 +1,12 @@
+[default]
+defargs = mcguire
+
+[mcguire]
+description = McGuire
+#forecast = False
+metar = http://weather.noaa.gov/pub/data/observations/metar/decoded/KWRI.TXT
+zone_forecast = http://weather.noaa.gov/pub/data/forecasts/zone/nj/njz019.txt
+
+[mmgl]
+description = Guadalajara
+metar = http://weather.noaa.gov/pub/data/observations/metar/decoded/MMGL.TXT
