@@ -1,0 +1,514 @@
+## ~/.muttrc
+## Contact: Dave Harding <dave@dtrt.org>
+
+##################################################
+##		Identity			##
+##################################################
+
+set realname="David A. Harding"
+#set from="dave@dtrt.org"
+set reverse_name
+set reverse_realname
+alternates dave@gnuisance.net
+alternates harda@gnuisance.net
+alternates harda@ruslug.rutgers.edu
+alternates dave@dtrt.org
+alternates david.harding@toomuchmedia.com
+#set use_from
+
+##################################################
+##              Local Mailboxes                 ##
+##################################################
+
+#set spoolfile = imaps://harding@mail.dtrt.org/INBOX
+#set folder = imaps://harding@mail.dtrt.org/INBOX
+
+set mbox_type="Maildir"
+set spoolfile = /home/harding/var/maildir
+set folder = /home/harding/var/maildir
+set mask="!^\\.[^.]"
+
+##################################################
+##              Scoring                         ##
+##################################################
+
+#Change the index view to show score, remove the
+#numbers of lines in the message. (tx Joey Hess)
+set index_format="%2N %Z %{%b %d} %-15.15F %s"
+
+## Change the format of forwarded subject lines
+set forward_format="Fwd: %s"
+
+## People
+## (mutt-alias-to-score applies the score in the last argument to each
+## entry in the addressbook which is the first argument)
+source "~/bin/mutt-alias-to-score ~/.mutt/ff.aliases 10|"
+source "~/bin/mutt-alias-to-score ~/.mutt/work.aliases 20|"
+source "~/bin/mutt-alias-to-score ~/.mutt/tmm.aliases 20|"
+
+## Mailing lists
+# score "~l" 5
+
+## Projects
+source ~/.mutt/projects.score
+
+## Subjects
+score "~s FW" -10
+
+## Me!
+#score "~p" 5
+#score "~P" 1
+
+## GnuPG signed & encrypted
+score "~g" 1
+score "~G" 1
+
+## Flagged Messages
+score "~F" 100
+
+## New and Old (New but unread) Messages
+score "~N" 25
+score "~O" 20
+
+## Messages I've replied too
+score "~Q" -10
+
+## Messages in a thread not containing messages from me
+# score "! ~(~P)" 5
+
+## Add a point to messages less than 80,000 bytes
+score "~z 0-80000" 1
+
+## Add a point for each day the message has been sitting around
+#score "~d >1d" 1
+#score "~d >2d" 1
+#score "~d >3d" 1
+#score "~d >4d" 1
+#score "~d >5d" 1
+#score "~d >6d" 1
+
+## Add a point for each week the message has been sitting around
+#score "~d >1w" 1
+#score "~d >2w" 1
+#score "~d >3w" 1
+#score "~d >4w" 1
+#score "~d >5w" 1
+
+## Add a point for each month the message has been sitting around
+#score "~d >1m" 1
+#score "~d >2m" 1
+#score "~d >3m" 1
+#score "~d >4m" 1
+#score "~d >5m" 1
+#score "~d >6m" 1
+
+#score "~C feed1" 1
+#score "~C feed2" 2
+#score "~C feed3" 3
+#score "~C feed4" 4
+#score "~C feed5" 5
+#score "~C feed6" 6
+#score "~C feed7" 7
+#score "~C feed8" 8
+#score "~C feed9" 9
+#score "~C feed10" 10
+
+
+##################################################
+##              Mailing Lists                   ##
+##################################################
+
+subscribe chlug@mail.jesran.net
+subscribe lugip@lugip.org
+subscribe ruslug-list@ruslug.rutgers.edu
+subscribe groupname-announce@plts.org
+subscribe ubuntu-us-nj@lists.ubuntu.com
+subscribe lunics@plts.org
+subscribe plug@phillylinux.org
+
+
+##################################################
+##              Misc. Stuff                     ##
+##################################################
+
+## This will narrow thread trees. It's ugly so I don't use it except
+## when it's actually needed.
+# set narrow_tree
+
+## The postponed messages file is stored as an mbox. By default it gets
+## put in the home directory but this is ugly when my homedir is clean.
+## This will put it in out-of-the-way.
+set postponed="~/.mutt/postponed"
+
+## Display the ``personal name'' for people from my mail aliases.
+set reverse_alias
+
+## Set Mail-Followup-To header. Mutt won't set it for subscribed
+## mailing lists.
+set followup_to
+
+## Save Certificates here:
+set certificate_file=~/.mutt/certificates
+
+## Don't let a power outage erase emails composed by default in /tmp
+set tmpdir=~/tmp/mutt
+
+## Be twice as lazy!  Don't type passwords and share your
+## muttrc file without fear.
+#source /tmp/harding-muttpw
+
+
+## Don't ask to move read messages, leave them where they are!
+set move = no
+
+## Default aliases (address book)
+source ~/.mutt/aliases
+set alias_file="~/.mutt/aliases"
+
+## Sorted aliases (address books)
+source ~/.mutt/ff.aliases
+source ~/.mutt/work.aliases
+source ~/.mutt/tmm.aliases
+source ~/.mutt/business.aliases
+source ~/.mutt/lists.aliases
+#source ~/.mutt/corresponedents.aliases
+#source ~/.mutt/mailing-lists.aliases
+
+## Save sent email.
+#folder-hook . 'set record="^"'
+set record="+.Sent"
+
+## Sometimes I delete an email, reconsider my decision, and move it to
+## my follow-up folder. This undeletes all messages in that folder
+## whenever I load it.
+folder-hook .aaa-followup push U.<return>
+
+# Specifies how to sort messages in the index menu.
+set sort=threads
+set sort_aux=score
+
+## Put display in Sent/ in date order:
+folder-hook !Sent source ~/.muttrc
+folder-hook .Sent 	    set sort=date
+
+folder-hook .archive.clean   set sort=from
+
+# don't add the hostname to the From header
+unset use_domain
+
+## Perhaps do something with this someday
+set attribution="On %d, %n wrote:"
+#set attribution="In message %i, %n wrote:"
+
+## Really nice for dealing with Debian BTS and other things
+set edit_headers
+
+## Especially nice in ion, now you can go to your mutt with M-g mutt\t
+set xterm_set_titles
+set xterm_title="%f: %?m?%m old?%?n? [%n NEW]? %?b?%b boxes?"
+set xterm_icon="%f: %?m?%m old?%?n? [%n NEW]? %?b?%b boxes?"
+# %b -- mailboxes with new email
+# %f -- foldername
+
+## Check for new mail this many seconds
+set mail_check=15
+
+## Don't wait for my input for more than this many seconds
+set timeout=15
+
+## I can't explain this consisely.  RTM.
+set to_chars=" +TCFL" #default
+
+## In order for the above to be reasonable, mutt can't ask about
+## appending messages to a file, so:
+set confirmappend=no
+
+## Use hashcash
+#set sendmail='/usr/bin/kuvert_mta_wrapper'
+
+## Check for attachments before sending
+#set sendmail="$HOME/.mutt/bin/checkattach /usr/lib/sendmail -oem -oi"
+set sendmail="$HOME/.mutt/bin/checkattach /dev/null save to local file"
+
+## Don't put .sig dash (signify, my random .sig generator does it
+## for me). Update: I changed things around, signify no longer inserts
+## the dashes.
+#unset sig_dashes
+
+## Purty printing
+set print_command="muttprint"
+
+## Use custom ispell (I also use GNU Style)
+set ispell="hispell"
+
+##############
+## Key Maps ##
+##############
+
+## Tag all messages received over 7 days ago
+macro index & "T~r >7d\n"
+
+## Forcibly get mail from IMAP server when I press G
+bind index G imap-fetch-mail
+
+bind index + flag-message
+bind pager + flag-message
+
+## Automatically forward message to my todo list
+#macro index D '|formail -c -xSubject: | mail todo@dtrt.org -s "$(cat)"\n'
+
+## Show only unread messages
+macro index A l~O|~N\n
+
+## Macros to limit un-important messages
+macro index 0 "l~n0-9999\n"
+macro pager 0 "l~n0-9999\n"
+
+macro index 1 "l~n1-9999\n"
+macro pager 1 "l~n1-9999\n"
+
+macro index 2 "l~n2-9999\n"
+macro pager 2 "l~n2-9999\n"
+
+macro index 3 "l~n3-9999\n"
+macro pager 3 "l~n3-9999\n"
+
+macro index 4 "l~n4-9999\n"
+macro pager 4 "l~n4-9999\n"
+
+macro index 5 "l~n5-9999\n"
+macro pager 5 "l~n5-9999\n"
+
+macro index 6 "l~n6-9999\n"
+macro pager 6 "l~n6-9999\n"
+
+macro index \` "l~d >30d\n"
+macro pager \` "l~d >30d\n"
+
+## Have SA (re)learn spam/ham messages
+## Note: deleting mail sends to SA to be learned as ham
+macro index S "d"
+macro pager S "d"
+macro index S "s+.learnspam\n"
+macro pager S "s+.learnspam\n"
+macro index d "s+.learnham\n"
+macro pager d "s+.learnham\n"
+
+## Followup, Hold, and Keep
+macro index E "s+.aaa-excellent\n"
+macro pager E "s+.aaa-excellent\n"
+macro index  "c+.aaa-excellent\n"
+macro pager  "c+.aaa-excellent\n"
+macro index F "s+.aaa-followup\n"
+macro pager F "s+.aaa-followup\n"
+macro index  "c+.aaa-followup\n"
+macro pager  "c+.aaa-followup\n"
+folder-hook .aaa-wait   set sort=reverse-date
+folder-hook .old-wait   set sort=reverse-date
+macro index W "s+.aaa-wait\n"
+macro pager W "s+.aaa-wait\n"
+macro index  "c+.aaa-wait\n"
+macro pager  "c+.aaa-wait\n"
+macro index  "c+.old-wait\n"
+macro pager  "c+.old-wait\n"
+macro index L "s+.saved\n"
+macro pager L "s+.saved\n"
+
+## Check Style
+#macro pager C "|sed '1,/^$/d; /^>/d' | dhstyle | less\n"
+
+## Search engine
+macro generic Z "<shell-escape>ssh -t dtrt nmzmail<return><esc>c=result<return>" "Search via nmzmail"
+
+## Match archive junk
+macro index P "lruslug-list.*post from|moderator request.*waiting|@truthout.org|Woot!|Cron <harda@|LogWatch\n"
+
+unset markers
+
+## Unmatched keys:
+##  G D U V w
+
+##################################################
+##              GnuPG Functions Code            ##
+##################################################
+## Using the settings from /usr/share/doc/mutt/examples/gpg.rc.gz
+set pgp_use_gpg_agent = yes
+set pgp_sign_as = F29EC4B7
+set pgp_autosign = yes
+set pgp_replyencrypt = no
+source ~/.mutt/gpg.rc
+
+##################################################
+##                      Headers                 ##
+##################################################
+
+ignore "from " received content- mime-version status x-status message-id
+ignore sender references return-path lines
+ignore delivered-to precedence errors-to in-reply-to 
+ignore x-loop x-sender x-msmail-priority x-mimeole x-priority
+ignore x-accept-language x-authentication-warning
+ignore list envelope-to x-beenthere x-mailman-version
+ignore x-spam-checker-version x-spam-level
+ignore X-Apparently-To Old-Return-Path Followup-To
+ignore Mail-Followup-To X-URL Mail-Copies-To X-Face
+ignore X-Debian-Message Resent-Message-ID Resent-From
+ignore X-Mailing-List Resent-Sender Resent-Date Resent-Bcc
+ignore X-Rc-Virus X-Rc-Spam X-Original-To
+ignore X-MS-Has-Attach XMS-TNEF-Correlator X-OriginalArrivalTime
+ignore X-Mailscanner X-AntiAbuse X-Source
+ignore X-Injected-Via-Gmane X-complaints-To X-Gmane-NNTP-Posting-Host
+ignore X-Enigmail-Version X-Enigmail-Supports X-Virus-Scanned
+ignore X-Originating-IP X-X-Sender
+ignore X-Received Mailing-List X-Yahoo-*
+ignore Date
+
+unignore User-Agent X-Mailer Delivery-date Message-Id
+
+unhdr_order *
+hdr_order Date: Delivery-date From: To: Cc: User-Agent: Message-Id: Subject:
+
+##################################################
+##                      Frills                  ##
+##################################################
+
+# colors
+color normal    white default
+color attachment brightyellow default
+color hdrdefault cyan default
+color indicator black cyan
+color markers   brightred default
+color quoted    green default
+color signature cyan default
+color status    white blue 
+color tilde     blue default
+color tree      red default
+
+## Color types of headers
+color header    brightgreen default ^From:
+color header    brightcyan default ^To:
+color header    brightred default ^Subject:
+color header    red     default ^User-Agent
+color header    red     default ^X-Mailer
+color header	brightmagenta	default ^Date
+color header	brightmagenta	default ^Delivery-date
+
+## Emphesise the User-Agent when sender also used mutt
+color header    brightred default ^User-Agent:\ Mutt
+
+## Color URLs
+color body brightgreen default "(ftp|http|https)://[-a-z_0-9./%#~:?=&]+"
+
+## score colours
+set my_curscore = `echo $(( 2 * 1 ))` 
+color index     cyan default "~n >$my_curscore"
+
+set my_curscore = `echo $(( 2 * 2 ))` 
+color index     blue default "~n >$my_curscore"
+
+set my_curscore = `echo $(( 2 * 3 ))` 
+color index     green default "~n >$my_curscore"
+
+set my_curscore = `echo $(( 2 * 4 ))` 
+color index     yellow default "~n >$my_curscore"
+
+set my_curscore = `echo $(( 2 * 5 ))` 
+color index     magenta default "~n >$my_curscore"
+
+set my_curscore = `echo $(( 2 * 6 ))` 
+color index     red default "~n >$my_curscore"
+
+set my_curscore = `echo $(( 2 * 7 ))` 
+color index     brightwhite default "~n >$my_curscore"
+
+set my_curscore = `echo $(( 2 * 8 ))` 
+color index     brightcyan default "~n >$my_curscore"
+
+set my_curscore = `echo $(( 2 * 9 ))` 
+color index     brightblue default "~n >$my_curscore"
+
+set my_curscore = `echo $(( 2 * 10 ))` 
+color index     brightgreen default "~n >$my_curscore"
+
+set my_curscore = `echo $(( 2 * 11 ))` 
+color index     brightyellow default "~n >$my_curscore"
+
+set my_curscore = `echo $(( 2 * 12 ))` 
+color index     magenta default "~n >$my_curscore"
+
+set my_curscore = `echo $(( 2 * 13 ))` 
+color index     brightred default "~n >$my_curscore"
+
+## Mailboxes ##
+#mailboxes !
+#mailboxes +
+
+mailboxes "+.good"
+mailboxes "+.github-mention"
+mailboxes "+.github-assigned"
+
+mailboxes "+.sms"
+mailboxes "+.security"
+mailboxes "+.biz.business"
+mailboxes "+.tmm"
+#mailboxes "+.biz.clients"
+
+mailboxes "+.accounts"
+mailboxes "+.alerts"
+mailboxes "+.biz.big"
+folder-hook .biz.big   set sort=reverse-date
+
+
+
+## I often stop reading at my inbox, so important folders go above here
+mailboxes "+"
+mailboxes "+.lists.21-co"
+mailboxes "+.lists.chlug"
+mailboxes "+.gnuisance"
+mailboxes "+.feeds"
+mailboxes "+.lists.chlug"
+mailboxes "+.lists.njloco"
+mailboxes "+.lists.lugip"
+mailboxes "+.lists.bitcoin-devel"
+mailboxes "+.lists.bitcoin-misc"
+mailboxes "+.lists.lightning"
+
+mailboxes "+.biz.key"
+folder-hook .biz.key   set sort=reverse-date
+mailboxes "+.biz.slush"
+folder-hook .biz.slush   set sort=reverse-date
+
+mailboxes "+.lists.ledger"
+mailboxes "+.lists.njloco"
+mailboxes "+.lists.mnemosyne"
+mailboxes "+.cron"
+mailboxes "+.todo"
+mailboxes "+.lists.plug"
+mailboxes "+.sbounces"
+mailboxes "+.probably-spam"
+mailboxes "+.ruslug"
+mailboxes "+.unimp"
+mailboxes "+.lists.interlug"
+mailboxes "+.ruslug"
+mailboxes "+.lists.ll2"
+mailboxes "+.lists.gnhlug"
+mailboxes "+.lists.nowhabit"
+mailboxes "+.lists.ocsj.bike"
+mailboxes "+.lists.ocsj.hike"
+mailboxes "+.lists.todotxt"
+mailboxes "+.lists.freecycle"
+mailboxes "+.lists.multibit"
+
+mailboxes "+.biz.unclients"
+folder-hook .biz.unclients   set sort=reverse-date
+
+mailboxes "+.biz.filtered"
+folder-hook .biz.filtered   set sort=reverse-date
+
+mailboxes "+.biz.business-opportunities"
+mailboxes "+.nocron"
+mailboxes "+.lists.bitcoin-docs"
+
+mailboxes "+.archive.clean"
+
+mailboxes "+.aaa-followup"
+folder-hook .aaa-followup   set sort=reverse-date
