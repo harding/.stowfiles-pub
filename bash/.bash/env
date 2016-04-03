@@ -24,5 +24,5 @@ export CHIMELOCK=~/volume-level.lock
 export PYTHONPATH=/usr/local/lib/python2.7/site-packages
 
 ## For Ledger
-export LEDGER_FILE=$HOME/ref/ledger/ledger.ledger
+export LEDGER_FILE=$HOME/.ledger/ledger.ledger
 export LEDGER=$LEDGER_FILE

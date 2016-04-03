@@ -215,8 +215,8 @@ _is_shell_interactive() {
 ##     alias remedit.todo="$EDITOR var/unison/doc/remind/todo_schedule.remind"
 ## fi
 
-alias editcron="$EDITOR ~/etc/cron/$USER/$HOSTNAME && loadcron"
-alias editanacron="$EDITOR ~/etc/anacron/$USER/$HOSTNAME"
+alias editcron="$EDITOR ~/.cron/$USER/$HOSTNAME && loadcron"
+alias editanacron="$EDITOR ~/.anacron/$USER/$HOSTNAME"
 
 ## Keep this section near end to avoid changing titles a million times
 ## during bash startup.
