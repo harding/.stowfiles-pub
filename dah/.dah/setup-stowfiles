@@ -1,0 +1,48 @@
+#!/bin/bash -eu
+
+## IMPORTANT: review this script before running!
+
+DIR=$HOME/.stowfiles-pub
+REPOSITORY=https://github.com/harding/.stowfiles-pub.git
+
+if ! [ -d $DIR ]; then
+  cd $HOME
+  git clone $REPOSITORY
+fi
+
+gpg --recv-key '19E9 2916 9F3D 1E64 43AD  315D 0A3F 3DCA D0DE 98BD'
+git log -1 --show-signature
+
+echo -n "Press enter if you've confirmed that you signed the latest commit"
+echo
+read
+
+## Git doesn't allow storing empty directories; here are some we want
+mkdir -p $HOME/zmp
+mkdir -p $HOME/tmp
+mkdir -p $HOME/.vim/backup
+mkdir -p $HOME/.vim/swap
+mkdir -p $HOME/.vim/undo
+
+## Files that can be safely moved out of the way
+DEFAULT_FILES="""
+  $HOME/.gconf/apps/%gconf.xml
+  $HOME/.bashrc
+  $HOME/.Xresources
+"""
+
+for f in $DEFAULT_FILES ; do
+  if [ -f $f ] ; then
+    mv $f $ZMP_DIR
+  fi
+done
+
+echo "Attempting to unstow all files"
+cd $DIR
+stow -D *
+
+echo
+echo "Attempting to stow all files"
+cd $DIR
+stow --no-folding *
+
