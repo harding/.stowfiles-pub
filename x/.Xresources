@@ -99,3 +99,6 @@ pwsafe*geometry:	80x5+0+20
 Xpdf*initialZoom: width
 !URxvt*utmpInhibit:	false
 !URxvt*loginShell:	true
+UXTerm*foreground:	white
+UXTerm*background:	black
+UXTerm*pointerColor:	white

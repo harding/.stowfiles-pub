@@ -68,7 +68,7 @@ mutt() {
     #ssh bitcoind1 ./enforcer_enabled || return 1
 
     maildirgit-client || return 1
-    dhonline && gsync var/maildir || return 1
+    gsync var/maildir || return 1
     if [ ! "$1" ]
     then
 	    command mutt -f '+.aaa-followup'
@@ -76,7 +76,7 @@ mutt() {
 	    command mutt $@
     fi
     maildirgit-client || return 1
-    dhonline && gsync var/maildir
+    gsync var/maildir
 }
 
 #alias asdf="xmodmap $HOME/.dvorak.xmodmap"

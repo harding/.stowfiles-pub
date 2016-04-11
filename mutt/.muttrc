@@ -24,8 +24,8 @@ alternates david.harding@toomuchmedia.com
 #set folder = imaps://harding@mail.dtrt.org/INBOX
 
 set mbox_type="Maildir"
-set spoolfile = /home/harding/var/maildir
-set folder = /home/harding/var/maildir
+set spoolfile = var/maildir
+set folder = var/maildir
 set mask="!^\\.[^.]"
 
 ##################################################
@@ -471,6 +471,7 @@ mailboxes "+.lists.lugip"
 mailboxes "+.lists.bitcoin-devel"
 mailboxes "+.lists.bitcoin-misc"
 mailboxes "+.lists.lightning"
+mailboxes "+.lists.qubes-users"
 
 mailboxes "+.biz.key"
 folder-hook .biz.key   set sort=reverse-date
