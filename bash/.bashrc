@@ -287,3 +287,5 @@ if [ "${SSH_CONNECTION:-nil}" != nil -a ${TERM:-nil} == xterm ]
 then
   export TERM=rxvt-unicode
 fi
+
+. /usr/lib/dah/bash

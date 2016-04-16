@@ -1,0 +1,30 @@
+#!/usr/bin/perl
+
+use Text::Autoformat qw(autoformat break_wrap);
+
+# Read input in slurp mode
+undef $/;
+$input = <>;
+
+# subsitute tabs with quoting characters autoformat understands
+# $input =~ s/\t/::::::::/g;  # 1 tab::8 colons
+
+# Stop here if the tab subsitution fails
+if ( $input =~ m/\t/ ) {
+    die "This file has tabs that will be clobbered";
+    }
+
+# Autoformat
+$output = autoformat $input, {
+    tabspace => 8,  # default
+    break => break_wrap,  # Don't break hypens across lines
+    };
+
+
+# Reverse initial subsitution
+# $output =~ s/:{8}/\t/g;  # 8 colons::1 tab
+
+# Remove trailing whitespace
+$output =~ s/\n+$/\n/gs;
+
+print $output;
